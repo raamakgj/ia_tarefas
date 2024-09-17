@@ -1,0 +1,161 @@
+/ia_tarefas
+    ├── fibonacci_check.py
+    ├── contar_letra_a.py
+    ├── valor_soma.py
+    ├── sequencias.py
+    ├── interrupotores.py
+    └── README.md
+1. fibonacci_check.py
+"""
+fibonacci_check.py
+
+Este script verifica se um número informado pelo usuário pertence à sequência de Fibonacci. 
+
+A sequência de Fibonacci é uma série de números onde cada número é a soma dos dois números anteriores. Começa com 0 e 1. 
+
+O programa solicita ao usuário um número e determina se ele faz parte desta sequência.
+"""
+
+def pertence_fibonacci(n):
+    a, b = 0, 1
+    while a <= n:
+        if a == n:
+            return True
+        a, b = b, a + b
+    return False
+
+def main():
+    numero = int(input("Digite um número: "))
+    if pertence_fibonacci(numero):
+        print(f"O número {numero} pertence à sequência de Fibonacci.")
+    else:
+        print(f"O número {numero} NÃO pertence à sequência de Fibonacci.")
+
+if __name__ == "__main__":
+    main()
+
+2. contar_letra_a.py
+"""
+contar_letra_a.py
+
+Este script conta a quantidade de vezes que a letra 'a' (tanto maiúscula quanto minúscula) aparece em uma string fornecida pelo usuário.
+
+O programa solicita ao usuário uma string e retorna o número de ocorrências da letra 'a'.
+"""
+
+def contar_a(s):
+    return s.lower().count('a')
+
+def main():
+    string = input("Digite uma string: ")
+    ocorrencias = contar_a(string)
+    print(f"A letra 'a' ocorre {ocorrencias} vezes na string.")
+
+if __name__ == "__main__":
+    main()
+
+3. valor_soma.py
+"""
+valor_soma.py
+
+Este script calcula o valor da variável SOMA a partir do código fornecido.
+
+O código realiza uma soma acumulativa de números inteiros a partir de 1 até um valor específico, que é 12 no exemplo dado.
+"""
+
+def calcular_soma(indice):
+    soma = 0
+    k = 1
+    while k < indice:
+        k += 1
+        soma += k
+    return soma
+
+def main():
+    indice = 12
+    resultado = calcular_soma(indice)
+    print(f"O valor da variável SOMA é {resultado}.")
+
+if __name__ == "__main__":
+    main()
+
+4. sequencias.py
+"""
+sequencias.py
+
+Este script fornece o próximo elemento para várias sequências numéricas.
+
+As sequências fornecidas são:
+a) Sequência aritmética.
+b) Sequência geométrica.
+c) Sequência de quadrados perfeitos.
+d) Sequência de quadrados de números pares.
+e) Sequência de Fibonacci.
+f) Sequência de números com intervalos variados.
+"""
+
+def completar_sequencias():
+    # a) Sequência: 1, 3, 5, 7, ___
+    print("a) Sequência: 1, 3, 5, 7, ___")
+    print("Próximo elemento: 9")
+    
+    # b) Sequência: 2, 4, 8, 16, 32, 64, ____
+    print("b) Sequência: 2, 4, 8, 16, 32, 64, ____")
+    print("Próximo elemento: 128")
+    
+    # c) Sequência: 0, 1, 4, 9, 16, 25, 36, ____
+    print("c) Sequência: 0, 1, 4, 9, 16, 25, 36, ____")
+    print("Próximo elemento: 49")
+    
+    # d) Sequência: 4, 16, 36, 64, ____
+    print("d) Sequência: 4, 16, 36, 64, ____")
+    print("Próximo elemento: 100")
+    
+    # e) Sequência: 1, 1, 2, 3, 5, 8, ____
+    print("e) Sequência: 1, 1, 2, 3, 5, 8, ____")
+    print("Próximo elemento: 13")
+    
+    # f) Sequência: 2, 10, 12, 16, 17, 18, 19, ____
+    print("f) Sequência: 2, 10, 12, 16, 17, 18, 19, ____")
+    print("Próximo elemento: 20")
+
+def main():
+    completar_sequencias()
+
+if __name__ == "__main__":
+    main()
+
+5. interrupotores.py
+"""
+interrupotores.py
+
+Este script fornece uma solução para identificar qual interruptor controla qual lâmpada em uma sala onde você não pode ver as lâmpadas diretamente.
+
+A solução envolve ligar e desligar os interruptores e usar as características das lâmpadas (acesas, apagadas e quentes) para determinar o controle de cada interruptor.
+"""
+
+def identificar_interruptores():
+    print("Para identificar qual interruptor controla qual lâmpada, siga estas etapas:")
+    print("1. Ligue o primeiro interruptor e deixe-o ligado por um período de tempo (por exemplo, 10 minutos).")
+    print("2. Após esse tempo, desligue o primeiro interruptor e ligue o segundo interruptor.")
+    print("3. Vá até as salas das lâmpadas e observe:")
+    print("   - A lâmpada que está acesa corresponde ao segundo interruptor (o que está atualmente ligado).")
+    print("   - Toque nas lâmpadas que estão apagadas. A lâmpada que estiver quente corresponde ao primeiro interruptor (o que foi ligado anteriormente e depois desligado).")
+    print("   - A lâmpada que está fria e apagada corresponde ao terceiro interruptor (o que nunca foi ligado).")
+
+def main():
+    identificar_interruptores()
+
+if __name__ == "__main__":
+    main()
+
+- README.md
+# Tarefas de Programação
+
+Este repositório contém soluções para uma série de tarefas de programação. Cada tarefa está implementada em um script Python separado.
+
+## Arquivos do Projeto
+
+- **fibonacci_check.py**: Verifica se um número informado pelo usuário pertence à sequência de Fibonacci.
+- **contar_letra_a.py**: Conta a quantidade de vezes que a letra 'a' (maiúscula ou minúscula) aparece em uma string fornecida pelo usuário.
+- **valor_soma.py**: Calcula o valor da variável SOMA a partir de um código forne
